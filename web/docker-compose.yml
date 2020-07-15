@@ -1,0 +1,14 @@
+version: "3.8"
+services:
+  web:
+    container_name: web # Because Docker container names must be unique, you cannot scale a service beyond 1 container if you have specified a custom name
+    build: .
+    image: angular-app-tasklist
+    ports:
+      - "80:80"
+    networks:
+      - network1
+
+networks:
+  network1:
+    name: frontend_network

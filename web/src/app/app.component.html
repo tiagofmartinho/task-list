@@ -1,0 +1,26 @@
+<div class="container" style="text-align: center;">
+  <br />
+
+  <ul class="list-group">
+    <li class="list-group-item d-flex bd-highlight" *ngFor="let task of tasks">
+      <span class="mr-auto p-2 bd-highlight">{{ task?.description }}</span>
+      <span
+        type="button"
+        class="p-2 bd-highlight"
+        (click)="deleteTask(task?.id)"
+        ><i class="fas fa-trash"></i
+      ></span>
+    </li>
+  </ul>
+
+  <br>
+  <br>
+
+  <div class="input-group mb-3">
+    <input type="text" class="form-control" placeholder="Task description" [(ngModel)]="taskToAddDescription" aria-label="Task description" aria-describedby="button-addon">
+    <div class="input-group-append">
+      <button class="btn btn-outline-secondary" type="button" (click)="addTask()" id="button-addon"><i class="fas fa-plus"></i></button>
+    </div>
+  </div>
+
+</div>

@@ -1,0 +1,19 @@
+version: "3.8"
+services:
+  api:
+    container_name: api # Because Docker container names must be unique, you cannot scale a service beyond 1 container if you have specified a custom name
+    build: .
+    image: spring-api-tasklistds
+    ports:
+      - "8080:8080"
+    environment:
+      - SPRING_DATASOURCE_URL=jdbc:mysql://db:3306/test?createDatabaseIfNotExist=true
+    networks:
+      - network1
+      - network2
+
+networks:
+  network1:
+    name: backend_network
+  network2:
+    name: frontend_network
