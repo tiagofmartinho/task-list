@@ -14,7 +14,7 @@ You should have Angular CLI installed for building and running the web app
 npm install -g @angular/cli
 ```
 
-This project is a Spring Boot maven project using Java 11. You should have Maven and JDK 11.x.x installed. You can Oracle's official JDK for personal use [here]( https://www.oracle.com/java/technologies/javase-jdk11-downloads.html)
+This project is a Spring Boot maven project using Java 11. You should have Maven and JDK 11.x.x installed. You can use Oracle's official JDK for personal use [here]( https://www.oracle.com/java/technologies/javase-jdk11-downloads.html)
 
 
 Otherwise use [OpenJDK](https://adoptopenjdk.net/) (used in Dockerfile)
